@@ -1,3 +1,11 @@
-<p>
-  ng-tree works!
-</p>
+
+<mat-accordion class="container-fluid">
+  <mat-expansion-panel class="col-md-12" *ngFor="let comment of comments">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{comment.name}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-ng-tree [data]="comment[prop]" [prop]="prop"></app-ng-tree>
+  </mat-expansion-panel>
+</mat-accordion>
