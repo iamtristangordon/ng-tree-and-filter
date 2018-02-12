@@ -10,7 +10,7 @@ import { CommentsService } from "./services/comments.service";
 })
 export class AppComponent implements OnInit {
   constructor(
-    private commentsService: CommentsService){}
+    private commentsService: CommentsService) { }
 
   public prop: string = "children";
   public filterVal: string;
