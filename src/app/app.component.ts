@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public prop: string = "children";
-  public data: Array<Object> = [{
+  public filterVal: string;
+  public data: Object[] = [{
     name: 'Parent',
     children: [
       {

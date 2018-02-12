@@ -1,21 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { MatExpansionModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { MatExpansionModule, MatInputModule, MatIconModule, MatButtonModule } from "@angular/material";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { AppComponent } from './app.component';
-import { NgTreeComponent } from './ng-tree/ng-tree.component';
+import { AppComponent } from "./app.component";
+import { NgTreeComponent } from "./ng-tree/ng-tree.component";
+import { CommentFilterPipe } from "./pipes/comment-filter.pipe";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgTreeComponent
+    NgTreeComponent,
+    CommentFilterPipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

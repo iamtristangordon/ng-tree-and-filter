@@ -1,11 +1,11 @@
 
-<mat-accordion class="container-fluid">
-  <mat-expansion-panel class="col-md-12" *ngFor="let comment of comments">
+<mat-accordion class="container-fluid" [multi]="true">
+  <mat-expansion-panel class="col-md-12 comment" *ngFor="let comment of comments" [expanded]="true">
     <mat-expansion-panel-header>
       <mat-panel-title>
         {{comment.name}}
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <app-ng-tree [data]="comment[prop]" [prop]="prop"></app-ng-tree>
+    <app-ng-tree [data]="comment[prop]" [prop]="prop" [@animateComment]></app-ng-tree>
   </mat-expansion-panel>
 </mat-accordion>
