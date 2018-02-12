@@ -14,12 +14,12 @@ export class CommentFilterPipe implements PipeTransform {
         //copy original so that data isn't mutated
         let newData = JSON.parse(JSON.stringify(data));
 
-        newData = newData.filter(function filter(d) {
-            console.log(d.name);
-            if (d.name.toLowerCase().includes(filterValue.toLowerCase())) return true;
+        newData = newData.filter(function filter(comment) {
+            console.log(comment.name);
+            if (comment.name.toLowerCase().includes(filterValue.toLowerCase())) return true;
 
-            if (d.children) {
-                return (d.children = d.children.filter(filter)).length;
+            if (comment.children) {
+                return (comment.children = comment.children.filter(filter)).length;
             }
         });
 
