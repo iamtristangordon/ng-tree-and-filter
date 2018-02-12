@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { NgTreeComponent } from "./ng-tree/ng-tree.component";
 import { CommentFilterPipe } from "./pipes/comment-filter.pipe";
+import { CommentsService } from "./services/comments.service";
 
 
 @NgModule({
@@ -24,7 +25,9 @@ import { CommentFilterPipe } from "./pipes/comment-filter.pipe";
     MatButtonModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    CommentsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
