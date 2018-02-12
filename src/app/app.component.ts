@@ -19,6 +19,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.commentsService.getComments().subscribe((data: Comment[]) => {
       this.data = data;
+    }, error => {
+      console.error(error);
     });
   }
 }
