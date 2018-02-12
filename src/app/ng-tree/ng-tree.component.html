@@ -3,9 +3,10 @@
   <mat-expansion-panel class="col-md-12 comment" *ngFor="let comment of comments" [expanded]="true">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        {{comment.name}}
+        <strong>{{comment.name}}</strong>
       </mat-panel-title>
     </mat-expansion-panel-header>
+    <div class="message">{{comment.message}}</div>
     <app-ng-tree [data]="comment[prop]" [prop]="prop" [@animateComment]></app-ng-tree>
   </mat-expansion-panel>
 </mat-accordion>

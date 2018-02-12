@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, style, animate, transition } from "@angular/animations";
+import { Comment } from "../models/comment.model";
 
 @Component({
   selector: 'app-ng-tree',
@@ -19,7 +20,7 @@ import { trigger, style, animate, transition } from "@angular/animations";
   ]
 })
 export class NgTreeComponent implements OnInit {
-  @Input('data') comments: Array<Object>;
+  @Input('data') comments: Comment[];
   @Input('prop') prop: string;
 
   constructor() { }
