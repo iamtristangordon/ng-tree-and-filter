@@ -3,5 +3,13 @@
         padding-left: 0;
         padding-right: 0;
         box-shadow: none;
+
+        .user-photo {
+            width: 26px;
+            height: 26px;
+            background: black;
+            border-radius: 26px;
+            margin-right: 13px;
+        }
     }
 }

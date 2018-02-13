@@ -3,6 +3,7 @@
   <mat-expansion-panel class="col-md-12 comment" *ngFor="let comment of comments" [expanded]="true">
     <mat-expansion-panel-header>
       <mat-panel-title>
+        <div class="user-photo"[style.background]="comment.profilePhoto"></div>
         <strong>{{comment.name}}</strong>
       </mat-panel-title>
     </mat-expansion-panel-header>

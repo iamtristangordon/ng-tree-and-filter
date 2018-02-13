@@ -4,6 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { MatExpansionModule, MatInputModule, MatIconModule, MatButtonModule, MatCardModule } from "@angular/material";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
+import { NgTreeRoutingModule } from "./ng-tree-routing.module";
 import { AppComponent } from "./app.component";
 import { NgTreeComponent } from "./ng-tree/ng-tree.component";
 import { CommentFilterPipe } from "./pipes/comment-filter.pipe";
@@ -19,6 +20,7 @@ import { CommentsService } from "./services/comments.service";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    NgTreeRoutingModule,
     MatExpansionModule,
     MatInputModule,
     MatIconModule,
