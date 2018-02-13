@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { MatExpansionModule, MatInputModule, MatIconModule, MatButtonModule } from "@angular/material";
+import { MatExpansionModule, MatInputModule, MatIconModule, MatButtonModule, MatCardModule } from "@angular/material";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppComponent } from "./app.component";
@@ -23,6 +23,7 @@ import { CommentsService } from "./services/comments.service";
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    MatCardModule,
     FormsModule
   ],
   providers: [

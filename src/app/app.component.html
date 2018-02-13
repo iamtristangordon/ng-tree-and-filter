@@ -1,14 +1,21 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
 <div class="container">
+  <mat-card class="col-md-8 col-md-offset-2 col-sm-12">
     <form class="form">
-      <mat-form-field class="col-sm-12">
-        <input matInput
+      <mat-form-field class="filter col-sm-12">
+        <input 
+          matInput 
           name="filter" 
           placeholder="Filter comments by name..." 
           [(ngModel)]="filterVal">
       </mat-form-field>
     </form>
-      
-    <app-ng-tree [data]="data | commentFilter: filterVal" [prop]="prop" class="col-md-12"></app-ng-tree>
+    <div class="comment-window">
+      <app-ng-tree 
+        [data]="data | commentFilter: filterVal" 
+        [prop]="prop" 
+        class="col-md-12">
+      </app-ng-tree>
+    </div>
+  </mat-card>
 </div>
-

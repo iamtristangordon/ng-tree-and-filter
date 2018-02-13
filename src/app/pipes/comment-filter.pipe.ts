@@ -12,15 +12,24 @@ export class CommentFilterPipe implements PipeTransform {
             return data;
         }
 
-        //copy original so that data isn't mutated
-        let newData: Comment[] = JSON.parse(JSON.stringify(data));
+        //avoid mutating object, create a duplicate
+        function duplicate(original) {
+            return Object.assign({}, original);
+        }
 
-        newData = newData.filter(function filter(comment: Comment) {
+        let newData = data.map(duplicate).filter(function filter(comment: Comment) {
             console.log(comment.name);
-            if (comment.name.toLowerCase().includes(filterValue.toLowerCase())) return true;
+            if (comment.name.toLowerCase().includes(filterValue.toLowerCase())) { 
+                /* if we have an absolute name match, 
+                only show the match and its ancestors (remove children)
+                 */
+                (comment.name.toLowerCase() === filterValue.toLowerCase()) ? delete comment.children : "";
+
+                return true; 
+            }
 
             if (comment.children) {
-                return (comment.children = comment.children.filter(filter)).length;
+                return (comment.children = comment.children.map(duplicate).filter(filter)).length;
             }
         });
 

@@ -9,7 +9,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://www.google.com/design/spec/style/color.html
-$ng-tree-and-filter-primary: mat-palette($mat-purple);
+$ng-tree-and-filter-primary: mat-palette($mat-indigo, 300);
 $ng-tree-and-filter-accent:  mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
