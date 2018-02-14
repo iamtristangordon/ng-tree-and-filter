@@ -6,31 +6,33 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { NgTreeRoutingModule } from "./ng-tree-routing.module";
 import { AppComponent } from "./app.component";
+import { MainComponent } from "./main/main.component";
 import { NgTreeComponent } from "./ng-tree/ng-tree.component";
 import { CommentFilterPipe } from "./pipes/comment-filter.pipe";
 import { CommentsService } from "./services/comments.service";
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NgTreeComponent,
-    CommentFilterPipe
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    NgTreeRoutingModule,
-    MatExpansionModule,
-    MatInputModule,
-    MatIconModule,
-    MatButtonModule,
-    MatCardModule,
-    FormsModule
-  ],
-  providers: [
-    CommentsService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MainComponent,
+        NgTreeComponent,
+        CommentFilterPipe
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        NgTreeRoutingModule,
+        MatExpansionModule,
+        MatInputModule,
+        MatIconModule,
+        MatButtonModule,
+        MatCardModule,
+        FormsModule
+    ],
+    providers: [
+        CommentsService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

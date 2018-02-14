@@ -9,7 +9,6 @@ import { comments } from "../data/comments";
 
 export class CommentsService {
     public getComments(): Observable<Comment[]> {
-
         return Observable.of(comments);
     }
 }
