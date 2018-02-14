@@ -12,7 +12,7 @@ export class CommentFilterPipe implements PipeTransform {
 			return data;
 		}
 
-		// avoid mutating object, create a duplicate
+		// avoid mutating objects in array, create a duplicate
 		function duplicate(original) {
 			return Object.assign({}, original);
 		}
