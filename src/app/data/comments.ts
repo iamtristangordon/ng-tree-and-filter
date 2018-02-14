@@ -1,13 +1,7 @@
 import { Comment } from "../models/comment.model";
 
 function getRandomColor() {
-    // let length = 6,
-    //     chars = '0123456789ABCDEF',
-    //     hex = '#';
-
-    // while(length--) hex += chars[(Math.random() * 16) | 0];
-    // return hex;
-
+    //generate pastel-ish color
     let cssHSL = "hsl(" + 360 * Math.random() + ',' +
                  (25 + 70 * Math.random()) + '%,' + 
                  (85 + 10 * Math.random()) + '%)';
@@ -38,7 +32,7 @@ export const comments: Comment[] = [{
                     ]
                 }, {
                     name: 'Child 4',
-                    message: "noobs lol",
+                    message: "lol",
                     profilePhoto: getRandomColor()
                 }
             ]
